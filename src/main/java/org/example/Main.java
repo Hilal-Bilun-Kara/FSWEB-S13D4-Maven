@@ -15,5 +15,18 @@ public class Main {
         Point point = new Point(0,0);
 
         System.out.println("distance()= " + point.distance());
+
+
+        Player player1 = new Player("Arthur", 1200, Weapon.SWORD);
+        System.out.println("healtremaining:" + player1.healthRemaining());
+
+        player1.loseHealth(30);
+        System.out.println(player1.healthRemaining()); // 70
+
+        player1.restoreHealth(50);
+        System.out.println(player1.healthRemaining()); // 100
+
+        player1.loseHealth(110);
+        System.out.println(player1.healthRemaining()); // 0
     }
 }
